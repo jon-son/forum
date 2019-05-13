@@ -1,0 +1,17 @@
+/**app.wxss**/
+button::after {
+  border: none;
+}
+
+button {
+  border-radius: 0;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.no-message{
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 80rpx;
+}

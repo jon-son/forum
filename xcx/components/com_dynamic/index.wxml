@@ -1,0 +1,34 @@
+<view class='container'>
+  <view class='top2'>
+    <image class='header' src='{{info.avatar}}' />
+    <view>
+      <view class='school-name'>{{info.name}}</view>
+      <view class='date-2'> ({{info.type==2?"教师":"学生"}}) </view>
+    </view>
+  </view>
+  <view class='content-text'>{{info.post_content}}</view>
+  <view class='img-box' >
+    <block wx:if='{{info.photos.length>0}}'>
+      <image wx:for='{{info.photos}}' wx:key='index' src='{{item.photo}}' bindtap='showImg' data-src='{{item.photo}}' class='content-img'></image>
+    </block>
+  </view>
+  <view class='content-data'>
+    <!-- <view class='mr60' bindtap='like'>
+      <image class='icon-like' src='{{info.alreadyLike?"/images/icon-like-activity.png":"/images/icon-like.png"}}'></image>
+      <text>{{info.likeAmount}}</text>
+    </view> -->
+    <view class='mr60' bindtap='comment'>
+      <image src='/images/icon-comments.png' class='icon-comments'></image>
+      <text>{{info.comment_num}}</text>
+    </view>
+    <button open-type='share'>
+      <image src='/images/icon-share3.png' class='icon-share'></image>
+      <text>分享</text>
+    </button>
+    <view class='flex-1'></view>
+    <view  bindtap='del' wx:if='{{management}}'>
+      <image src='/images/icon_delete.png' class='icon-del'></image>
+      <text>删除</text>
+    </view>
+  </view>
+</view>

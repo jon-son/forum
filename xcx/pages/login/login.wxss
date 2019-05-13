@@ -1,0 +1,11 @@
+/* pages/login/login.wxss */
+page{
+  background: #f2f3f5;
+  padding-top: 2rpx;
+}
+.btn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,17 @@
+<!--pages/detail/detail.wxml-->
+<form bindsubmit='formSubmit'>
+  <dynamic bind:del='del' management='{{management==1}}' info='{{info}}' />
+  <comment bind:comment='comment' list='{{comments}}' />
+  <view class='textarea-box'>
+    <view class='avtivity-title'>
+      <view class='line'></view>
+      <text>发表评论</text>
+    </view>
+    <view wx:if='{{reback_user_id!=-1}}' class='reback'>
+      <text>回复<text class='reback-name'>{{reback_name}}</text></text>
+      <van-icon bind:click='close' color='#5e6366' size="24px" name="close" />
+    </view>
+    <textarea focus='{{focus}}' value='{{content}}' name='comment_content' placeholder='在此输入评论'></textarea>
+  </view>
+  <button form-type='submit' class='submit'>发布评论</button>
+</form>

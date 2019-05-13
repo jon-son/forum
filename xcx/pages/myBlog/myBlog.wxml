@@ -1,0 +1,8 @@
+<view class='container'>
+  <block wx:for='{{list}}' wx:key='index'>
+    <view bind:tap='toDetail' id='{{item.id}}' class='mt2'>
+      <dynamic management='{{true}}'  ban='{{true}}' info='{{item}}' />
+    </view>
+  </block>
+  <view wx:if='{{list.length==0}}' class='no-message'>暂无帖子</view>
+</view>

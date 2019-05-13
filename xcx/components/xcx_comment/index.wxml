@@ -1,0 +1,29 @@
+<!--components/xcx_comment/index.wxml-->
+<view class='continer'>
+  <view class='avtivity-title'>
+    <view class='line'></view>
+    <text>评论互动({{list.length}})</text>
+  </view>
+  <view class='i-comment-box' wx:for='{{list}}' wx:key='{{id}}'>
+    <image class='header-img' src='{{item.avatar}}'></image>
+    <view class='i-right'>
+      <view class='top'>
+        <view>
+          <text class='name'>{{item.name}}</text>
+        </view>
+      </view>
+      <view class='center'>
+        <text>{{item.create_time}}</text>
+        <text class='ml20'>{{item.type==2?"老师":"学生"}}</text>
+      </view>
+      <view bindtap='setComment' data-info='{{item}}' class='footer'>
+      <view wx:if='{{item.reback_user_id!=-1}}'>@<text style='color:#07c160'>{{item.reback_name}}:</text></view>
+      <text>{{item.comment_content}}</text>
+      </view>
+    </view>
+
+  </view>
+  <view class='no-info' wx:if='{{list.length==0}}'>
+    暂无评论...
+  </view>
+</view>

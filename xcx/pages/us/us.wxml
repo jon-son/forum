@@ -1,0 +1,16 @@
+<!--pages/us/us.wxml-->
+<view class='top'>
+  <image class='header' src='{{userInfo.avatar?userInfo.avatar:"/images/no-login.png"}}'></image>
+  <view class='name' wx:if='{{userInfo}}'>
+     <text>{{userInfo.name}}</text>
+     <text class='type'>({{userInfo.type==2?"教师":"学生"}})    </text>
+  </view>
+  <view
+  class='no-login'
+   wx:else>
+    <van-button bind:click='login' type="primary">登陆</van-button>
+    <van-button bind:click='registered' plain type="primary">注册</van-button>
+  </view>
+</view>
+<van-cell bind:tap='myblog' title="我的帖子" is-link />
+<van-cell wx:if='{{userInfo}}' bind:tap='exit' title="退出登陆" is-link />
