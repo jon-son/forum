@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "dynamic":"/components/com_dynamic/index",
-    "van-search": "/dist/search/index"
-  },
-  "navigationBarTitleText": "首页"
-}

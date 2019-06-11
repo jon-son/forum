@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-field": "/dist/field/index"
-  },
-  "navigationBarTitleText": "发布帖子"
-}

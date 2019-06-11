@@ -1,9 +1,0 @@
-<view class='container'>
-<van-search  bind:search="onSearch" value="{{ value }}" placeholder="请输入搜索关键词" />
-  <block wx:for='{{list}}' wx:key='index'>
-    <view bind:tap='toDetail' id='{{item.id}}' class='mt2'>
-      <dynamic  ban='{{true}}' info='{{item}}' />
-    </view>
-  </block>
-  <view wx:if='{{list.length==0}}' class='no-message'>暂无帖子</view>
-</view>

@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "dynamic": "/components/com_dynamic/index",
-    "comment": "/components/xcx_comment/index",
-    "van-icon": "/dist/icon/index"
-  },
-  "navigationBarTitleText": "帖子"
-}

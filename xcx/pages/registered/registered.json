@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "van-field": "/dist/field/index",
-    "van-button": "/dist/button/index",
-"van-cell": "/dist/cell/index"
-  },
-  "navigationBarTitleText": "注册"
-}
